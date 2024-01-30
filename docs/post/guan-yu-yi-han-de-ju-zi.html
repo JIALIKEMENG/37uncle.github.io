@@ -12,8 +12,9 @@
         else if(localStorage.getItem("meek_theme")=="light"){document.getElementsByTagName("html")[0].attributes.getNamedItem("data-color-mode").value="light";}
     </script>
     
-<meta name="description" content="心有山海，静而不争。">
-<title>37uncle</title>
+<meta name="description" content="关于遗憾的句子">
+<title>关于遗憾的句子</title>
+
 
 </head>
 <style>
@@ -24,147 +25,99 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </style>
 
 <style>
-.avatar {transition: 0.8s;width:64px;height:64px;}
-.avatar:hover{transform: scale(1.15) rotate(360deg);}
-#header h1 a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-family:Monaco;margin-left:8px;}
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
-.title-right button{margin-right:8px;padding:16px;}
-.title-right .circle{padding: 14px 16px;}
-
-.SideNav{min-width: 360px;}
-.SideNav-icon{margin-right: 16px}
-.SideNav-item .Label{color: #fff;margin-left:8px;}
-.d-flex{min-width:0;}
-.listTitle{overflow:hidden;white-space:nowrap;text-overflow: ellipsis;max-width: 100%;}
-.listLabels{white-space:nowrap;}
-.listLabels object{max-height:16px;max-width:24px;}
-
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
 @media (max-width: 600px) {
     body {padding: 8px;}
-    .avatar {width:40px;height:40px;}
-    .blogTitle{display:none;}
-    #buttonRSS{display:none;}
-    .LabelTime{display:none;}
+    .postTitle{font-size:24px;}
 }
 </style>
 
 
+
+
 <body>
     <div id="header">
-<h1>
-    <img src="https://picshack.net/ib/lD7xUOrCIA.png" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">37uncle</a></h1>
+<h1 class="postTitle">关于遗憾的句子</h1>
 <div class="title-right">
-    <a href="https://jialikemeng.github.io/37uncle.github.io/tag.html"><button id="buttonSearch" class="btn btn-invisible circle" title="搜索">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathSearch" fill-rule="evenodd"></path>
+    
+    <a href="https://jialikemeng.github.io/37uncle.github.io"><button id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+        </svg>
+    </button></a>
+
+    
+    <a href="https://github.com/JIALIKEMENG/37uncle.github.io/issues/11" target="_blank"><button class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
         </svg>
     </button></a>
     
-    <a href="https://jialikemeng.github.io/37uncle.github.io/rss.xml" target="_blank"><button id="buttonRSS" class="btn btn-invisible circle" title="RSS">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathRSS" fill-rule="evenodd"></path>
-        </svg>
-    </button></a>
-    <button class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
+
+    <button class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
     </button>
+
 </div>
 </div>
     <div id="content">
-<div style="margin-bottom: 16px;">心有山海，静而不争。</div>
-<nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/guan-yu-yi-han-de-ju-zi.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">关于遗憾的句子</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/ju-zi-OR-duan-zi-02.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">句子OR段子02</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/ju-zi-OR-duan-zi-01.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">句子OR段子01</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/xuan-zai-ban-kong-de-xi-huan-%EF%BC%8C-fei-bu-guo-wan-shui-qian-shan.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">悬在半空的喜欢，飞不过万水千山</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/nan-ren-zhe-wei-zhong-yao.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">男人这味中药</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/mei-guo-ma-ma-gei-er-zi-de-shou-ji-shi-yong-tiao-kuan.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">美国妈妈给儿子的手机使用条款</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/tui-fei-wen-zi.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">颓废文字</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/yi-xie-ren-jian-qing-xing-de-ju-zi.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">一些人间清醒的句子</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#D0D91B"><object><a style="color:#fff" href="https://jialikemeng.github.io/37uncle.github.io/tag.html#文摘">文摘</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-30</span>
-    </div>
-</a>
-</nav>
+<div class="markdown-body" id="postBody"><p>01<br>
+如果真的有反方向的钟，我希望回到刚遇见你的时候，因为那个时候，我连你叫什么都不感兴趣。<br>
+02<br>
+其实我很早就知道我们不合适，但我还是拒绝了所有人，陪你走过一段没有结果的路。<br>
+虽然时间不长，但毕生难忘。想想真是心酸，留住你和放下你，我都做不到。<br>
+03<br>
+等我心里非你不可的那股劲消失了，错过就错过吧，我没什么好后悔的，该做的我都做了。<br>
+我尽了最大的努力，最后结果不如意我也没有办法了。<br>
+04<br>
+过了很久之后的我才想明白，你一开始和我说的那句“真的对不起”，不过是飞机场广播里那种抱歉的通知又延误了您的班机。<br>
+你最后分别时说的“非常谢谢你”，是三块一瓶的红茶盖子里的那种谢谢你的参与。<br>
+那时候我觉得你是真的对我心怀歉意，对这样的结局表示抱歉。<br>
+我也以为你像我感谢你一样感谢我。<br>
+05<br>
+你的出现为了什么呢，是为了让我付出的真心又重新打水漂？<br>
+还是为了在我本该痊愈的心上又重新插上一把刀？<br>
+06<br>
+我好像很喜欢你，又好像有些释怀。<br>
+那股偏执的爱混杂着委屈和不甘，退下去又涨起来，犹犹豫豫，反反复复。<br>
+07<br>
+人跟梧桐是一样的，心空了还能勉强立着，旁人以为下个春天它就能发芽，其实那个冬天它就死了。<br>
+08<br>
+我渐渐的好像明白了，为什么一直放不下你？<br>
+不是因为你有多好，而是在几年前我们情窦初开的时候，你刚刚好进入了我的世界，也刚刚好给了我最初那种不是爱却也夹在喜欢中间的感觉。<br>
+那种感觉，我找了很多很多年。<br>
+09<br>
+多深的债啊，十几亿人口中相遇。<br>
+多薄的情啊，两个人短短的名字，始终写不到一本巴掌大的结婚证上。<br>
+10<br>
+我抓不住世间美好，只好装作万事顺遂的样子。<br>
+11<br>
+个个都说，见过花开就好了，管他花落谁家。<br>
+可我见过花开，怎么甘心花落别家。<br>
+12<br>
+遗憾不能只写遗憾，要写初识的装模作样，为了接近她的朝思暮想。<br>
+要写她的喜怒无常，要写自己不断放大如杂草丛生的爱意，要写与无爱者的彻夜谈爱。<br>
+要写她说喜欢上另一个人的模样，就如同大梦一场。<br>
+13<br>
+我偷偷地碰了你一下，不料你像蒲公英一样散开，此后到处都是你的影子。<br>
+14<br>
+有些人真奇怪，不爱你还不放过你。<br>
+有些人更奇怪，爱你还放过你。<br>
+15<br>
+虽然有些人帮助我成长了，但他们的方式，不值得我一声感谢。<br>
+（摘自网络）</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">转载文章请注明出处，谢谢!</div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://jialikemeng.github.io/37uncle.github.io"> 37uncle </a>
 <p>
@@ -217,19 +170,45 @@ console.log("\n %c Gmeek main %c https://github.com/Meekdai/Gmeek \n\n", "color:
 </script>
 
 <script>
-document.getElementById("pathSearch").setAttribute("d",IconList["search"]);
-document.getElementById("pathRSS").setAttribute("d",IconList["rss"]);
-iconTOP=document.getElementsByClassName("svgTop1");
-iconPost=document.getElementsByClassName("svgTop0");
-for(var i=0;i<iconTOP.length;i++){
-    iconTOP[i].setAttribute("d",IconList["upload"]);
-    iconTOP[i].parentNode.style.color="red";
-}
-for(var i=0;i<iconPost.length;i++){
-    iconPost[i].setAttribute("d",IconList["post"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","JIALIKEMENG/37uncle.github.io");
+    script.setAttribute("issue-term","title");
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else{script.setAttribute("theme","github-light");}
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
 }
 
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
 
 </script>
+
+
+
 
 </html>

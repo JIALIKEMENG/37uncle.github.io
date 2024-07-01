@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://telegraph-image-yht.pages.dev/file/1cf1bc17a8b651ba88fae.png"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -202,8 +202,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 　　历史固然是一面镜子，但倘若没有丰富的甚至是痛苦的残酷的人生体验，那面镜子只是形同虚设，最多也只是热闹好看而已。正因为杨慎的人生感受太多太深，他才能看穿世事，把这番人生哲理娓娓道来，令无数读者产生心有戚戚的感觉。<br>
 　　青山不老，看尽炎凉世态；佐酒笑语，释去心头重负。任凭江水淘尽世间事，化作滔滔一片潮流，但总会在奔腾中沉淀下些许的永恒。与人生短暂虚幻相对的是超然世外的旷达和自然宇宙的永恒存在。宇宙永恒，人生有限；江水不息，青山常在。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载文章请注明出处，谢谢!</div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://jialikemeng.github.io/37uncle.github.io"> 37uncle </a>
 <p>
@@ -258,6 +260,8 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");
